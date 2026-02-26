@@ -22,7 +22,7 @@ default: &default
 
 development:
   <<: *default
-  database: rails_watch_list_development
+  database: rails_watch_list_2193_solutions_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.

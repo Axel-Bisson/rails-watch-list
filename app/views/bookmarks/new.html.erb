@@ -1,0 +1,14 @@
+<div class="banner mb-3">
+  <h1 class="text-center">Ajouter un film à ma liste : <%= @list.name %></h1>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.input :comment %>
+        <%= f.association :movie, prompt: "Select a Movie" %>
+        <%= f.submit class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

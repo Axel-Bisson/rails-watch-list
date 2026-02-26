@@ -1,0 +1,16 @@
+<div class="banner text-center mb-3">
+  <h1>Mes listes</h1>
+  <%= link_to "Ajoute une liste", new_list_path, class: 'btn btn-primary' %>
+</div>
+<div class="container">
+  <% if List.count >= 1 %>
+    <div class="cards">
+      <% @lists.each do |list| %>
+        <%= link_to list.name, list_path(list)  %>
+      <% end  %>
+  </div>
+  <% else  %>
+    Vite, tu n'as pas du liste ,ajoute une liste <br/>
+    <%= link_to "Ajoute une liste", new_list_path, class: 'btn btn-primary' %>
+  <% end  %>
+</div>
