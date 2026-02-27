@@ -10,8 +10,8 @@
   <h2>Mes films</h2>
   <div class="cards">
     <% @list.movies.each do |movie| %>
-      <div>
-        <p><%= movie.title %></p>
+      <div class="card">
+        <h4><%= movie.title %></h4>
         <p><%= movie.overview %></p>
         <p><%= movie.display_rating_one_decimal %></p>
 
